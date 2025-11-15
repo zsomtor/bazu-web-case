@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAZU Impact Stories - Valódi történetek, valódi eredmények</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bazu-yellow': '#ffed00',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 237, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+        <!-- Background gradient effect -->
+        <div class="absolute inset-0 bg-gradient-to-b from-yellow-900/5 to-transparent"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <!-- Main Headline -->
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+                Nézd meg, hogyan
+                <span class="text-bazu-yellow">változtatták meg</span>
+                <br>életüket a Bazu szereplői
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-xl md:text-2xl lg:text-3xl text-gray-400 mb-16 font-light">
+                Valódi történetek, valódi eredmények
+            </p>
+
+            <!-- Stats Counter -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
+                <!-- Stat 1 -->
+                <div class="fade-in bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50 transition-all duration-300">
+                    <div class="text-5xl md:text-6xl font-black text-bazu-yellow mb-3" id="views-counter">
+                        0
+                    </div>
+                    <div class="text-gray-400 text-sm md:text-base font-medium uppercase tracking-wider">
+                        Megtekintés
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="fade-in bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50 transition-all duration-300" style="transition-delay: 0.1s">
+                    <div class="text-5xl md:text-6xl font-black text-bazu-yellow mb-3" id="feedback-counter">
+                        0%
+                    </div>
+                    <div class="text-gray-400 text-sm md:text-base font-medium uppercase tracking-wider">
+                        Pozitív visszajelzés
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="fade-in bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50 transition-all duration-300" style="transition-delay: 0.2s">
+                    <div class="text-5xl md:text-6xl font-black text-bazu-yellow mb-3" id="followers-counter">
+                        0
+                    </div>
+                    <div class="text-gray-400 text-sm md:text-base font-medium uppercase tracking-wider">
+                        Új követő átlagosan
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-bazu-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-4">
+                    <span class="text-bazu-yellow">Impact</span> Stories
+                </h2>
+                <p class="text-gray-400 text-lg md:text-xl font-light">
+                    Így változtatta meg a Bazu az ő életüket
+                </p>
+            </div>
+
+            <!-- Stories Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Story 1: Rózsa Sándor Marcel -->
+                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Rózsa Sándor Marcel</h3>
+                            <p class="text-gray-500 text-sm mt-1">Vállalkozó</p>
+                        </div>
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20">
+                            Üzleti Kapcsolatépítés
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Rózsa Sándor Marcel egy új céggel tárgyalt, amikor a pénzügyes megkérdezte: "Várj, nem te voltál a Bazu videóban?" A felismerés icebreaker lett, feloldotta a hangulatot, és a deal megköttetett.
+                        </p>
+                        <p>
+                            Kezdetben azt hitte, "béna" TikTok videóban szerepelni, de teljesen tévedett - azóta elgondolkodott a saját személyes brandjének építésén is.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 2: Bolyár Gábor -->
+                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Bolyár Gábor</h3>
+                            <p class="text-gray-500 text-sm mt-1">Graphisoft</p>
+                        </div>
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20">
+                            Professzionális Megjelenés
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Bolyár Gábor a street interview után rengeteg gratulációt kapott kollégáktól és ismerősöktől, hogy "milyen jókat mondott" a videóban.
+                        </p>
+                        <p>
+                            Annyira tetszett neki, ahogy rövid formátumba átadták minden gondolatát, hogy ezután eljött podcast vendégnek is.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 3: Damborózia -->
+                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Damborózia</h3>
+                            <p class="text-gray-500 text-sm mt-1">Esküvői Ruha Márka</p>
+                        </div>
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20">
+                            Hálózat Felélesztése
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            A Damborózia márka tulajdonosa sehol nincs jelen a közösségi médiában, mégis csomó emberrel találkozik azóta, aki a Bazu videóból ismeri.
+                        </p>
+                        <p>
+                            Régi iskolatársai írtak rá az osztálytalálkozón: "Úristen, nem is tudtuk hogy te ezt csinálod, milyen jó!" - annak ellenére, hogy évek óta nem hallottak róla.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 4: Homán Zsolt -->
+                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Homán Zsolt</h3>
+                            <p class="text-gray-500 text-sm mt-1">Homán Transport</p>
+                        </div>
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20">
+                            Azonnali Virális Hatás
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Homán Zsolt már aznap, amikor megjelent a videó, 15 barátjától kapta: "Milyen jó, menő hogy itt vagy!"
+                        </p>
+                        <p>
+                            Bár nem beszélt sokat, sokan küldték egymásnak és jelezték, hogy jól beszélt, tetszett.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 5: Tóth Alex (Featured) -->
+                <div class="fade-in card-hover bg-gradient-to-br from-zinc-900 to-zinc-800 border-2 border-bazu-yellow/50 rounded-2xl p-8 relative overflow-hidden">
+                    <!-- Featured badge -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-2xl">⭐</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Tóth Alex</h3>
+                            <p class="text-gray-500 text-sm mt-1">Órás</p>
+                        </div>
+                        <span class="bg-bazu-yellow text-black px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
+                            Üzleti Transzformáció
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Tóth Alex órás szerepelt a Bazu egyik legnézettebb TikTok videójában (1.5M+ megtekintés). Már aznap 10+ ember kérte el a telefonszámát. Saját profilján 600-ról 6-7 ezer megtekintésre ugrott pár nap alatt - annak ellenére, hogy sem neve, sem cége nem volt elmondva a videóban.
+                        </p>
+                        <p>
+                            6-7 ezer ember aktívan megkereste őt. Azóta kampányol a Bazu videóval, új videóit a Bazu hookkal indítja, és "kurva sok ügyfél, megkeresés" érkezett.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 6: Lipp Adrienn -->
+                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Lipp Adrienn</h3>
+                            <p class="text-gray-500 text-sm mt-1">Ingatlan</p>
+                        </div>
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20">
+                            Nemzetközi Elérés
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Lipp Adrienn még Bécsben is felismerték a videó után. Az oldala lefagyott a megnövekedett forgalomtól.
+                        </p>
+                        <p>
+                            Még aznap felhívták, hogy gratuláljanak és segítséget kérjenek ingatlan ügyben.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 7: Zoltán (Featured) -->
+                <div class="fade-in card-hover bg-gradient-to-br from-zinc-900 to-zinc-800 border-2 border-blue-500/50 rounded-2xl p-8 relative overflow-hidden">
+                    <!-- Featured badge -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-2xl">💙</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Zoltán</h3>
+                            <p class="text-gray-500 text-sm mt-1">50 Éves Vállalkozó</p>
+                        </div>
+                        <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-500/30">
+                            Életmű Validáció
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Egy 50 éves vállalkozó 50 évig próbált jó lenni, de sosem volt visszaigazolása. A Bazu videó 700 kommentet kapott, 98% pozitív volt.
+                        </p>
+                        <p>
+                            Felhívta Kazut: "Ez olyan visszaigazolás volt, amit még sosem kaptam... boldogság, hogy úristen, akkor jól csináltam az életemet, mert ennyi ember így gondolja." Szívmelengető volt neki, és a legjobb döntés volt, hogy megállt nekik.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story 8: Kapitány István -->
+                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-bazu-yellow/50">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Kapitány István</h3>
+                            <p class="text-gray-500 text-sm mt-1">BGE Előadó</p>
+                        </div>
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20">
+                            Előadói Felismerés
+                        </span>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3">
+                        <p>
+                            Kapitány István a BGE-n tartott előadást, amikor észrevette, hogy a hallgatók ismerősen néznek rá. Kiderült, hogy a "Bazu interjúzás"-ként ismerik fel.
+                        </p>
+                        <p>
+                            Sokan még azelőtt látták a videóban, mielőtt az előadására mentek volna.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 px-6 relative overflow-hidden">
+        <!-- Background effect -->
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/10 via-transparent to-transparent"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 fade-in">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+                Te is szeretnél ilyen <span class="text-bazu-yellow">eredményeket?</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 font-light">
+                Légy te a következő sikertörténet
+            </p>
+            <a href="#" class="inline-block bg-bazu-yellow text-black px-10 py-5 rounded-full text-lg font-bold uppercase tracking-wider hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-bazu-yellow/50">
+                Jelentkezz interjúra
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2024 BAZU. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Counter Animation
+        function animateCounter(element, target, duration, suffix = '') {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + suffix;
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Start counter animations after a short delay
+            setTimeout(() => {
+                animateCounter(document.getElementById('views-counter'), 1.5, 2000, 'M+');
+                animateCounter(document.getElementById('feedback-counter'), 98, 2000, '%');
+                animateCounter(document.getElementById('followers-counter'), 6500, 2000, '');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
