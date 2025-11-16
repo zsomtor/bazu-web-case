@@ -50,65 +50,6 @@
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20 relative overflow-hidden">
-        <!-- Background gradient effect -->
-        <div class="absolute inset-0 bg-gradient-to-b from-yellow-900/5 to-transparent"></div>
-
-        <div class="max-w-6xl mx-auto text-center relative z-10">
-            <!-- Main Headline -->
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-                Nézd meg, hogyan <span class="text-bazu-yellow">változtatták meg</span>
-                <br class="hidden sm:block">életüket a Bazu szereplői
-            </h1>
-
-            <!-- Subheadline -->
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-400 mb-12 md:mb-16 font-light">
-                Valódi történetek, valódi eredmények
-            </p>
-
-            <!-- Stats Counter -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
-                <!-- Stat 1 -->
-                <div class="fade-in bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8 hover:border-bazu-yellow/50 transition-all duration-300">
-                    <div class="text-4xl md:text-5xl lg:text-6xl font-black text-bazu-yellow mb-2 md:mb-3" id="views-counter">
-                        0
-                    </div>
-                    <div class="text-gray-400 text-xs md:text-sm font-medium uppercase tracking-wider">
-                        Megtekintés
-                    </div>
-                </div>
-
-                <!-- Stat 2 -->
-                <div class="fade-in bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8 hover:border-bazu-yellow/50 transition-all duration-300" style="transition-delay: 0.1s">
-                    <div class="text-4xl md:text-5xl lg:text-6xl font-black text-bazu-yellow mb-2 md:mb-3" id="feedback-counter">
-                        0%
-                    </div>
-                    <div class="text-gray-400 text-xs md:text-sm font-medium uppercase tracking-wider">
-                        Pozitív visszajelzés
-                    </div>
-                </div>
-
-                <!-- Stat 3 -->
-                <div class="fade-in bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8 hover:border-bazu-yellow/50 transition-all duration-300" style="transition-delay: 0.2s">
-                    <div class="text-4xl md:text-5xl lg:text-6xl font-black text-bazu-yellow mb-2 md:mb-3" id="followers-counter">
-                        0
-                    </div>
-                    <div class="text-gray-400 text-xs md:text-sm font-medium uppercase tracking-wider">
-                        Új követő átlagosan
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-bazu-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-        </div>
-    </section>
-
     <!-- About Bazu Section -->
     <section class="py-20 md:py-32 px-6 relative overflow-hidden bg-gradient-to-b from-black via-zinc-950 to-black">
         <!-- Animated background elements -->
@@ -222,23 +163,85 @@
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section class="py-20 px-6 relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute top-1/4 left-0 w-64 h-64 bg-bazu-yellow/3 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-blue-500/3 rounded-full blur-3xl"></div>
+    <!-- Impact Stories Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 md:px-6 py-20 md:py-32 relative overflow-hidden bg-gradient-to-b from-zinc-950 via-black to-black">
+        <!-- Massive animated background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 -left-48 w-96 h-96 bg-bazu-yellow/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 -right-48 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" style="animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-bazu-yellow/5 to-transparent"></div>
+        </div>
 
-        <div class="max-w-7xl mx-auto relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-                    <span class="text-bazu-yellow">Impact</span> Stories
-                </h2>
-                <p class="text-gray-400 text-lg md:text-xl lg:text-2xl font-light mb-8">
-                    Így változtatta meg a Bazu az ő életüket
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <!-- Epic Headline -->
+            <div class="fade-in mb-12 md:mb-16">
+                <div class="inline-block mb-6 px-6 py-3 bg-bazu-yellow/10 border border-bazu-yellow/30 rounded-full backdrop-blur-sm">
+                    <span class="text-bazu-yellow font-bold text-sm md:text-base uppercase tracking-wider">✨ Success Stories</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
+                    Nézd meg, hogyan<br>
+                    <span class="text-bazu-yellow relative inline-block">
+                        változtatták meg
+                        <!-- Underline decoration -->
+                        <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 10C60 3 120 2 180 5C220 7 260 9 298 10" stroke="#ffed00" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </span><br>
+                    életüket a <span class="text-white">Bazu</span> szereplői
+                </h1>
+
+                <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto mb-12">
+                    Valódi történetek, <span class="text-bazu-yellow font-semibold">valódi eredmények</span> –
+                    emberek akik megosztották történetüket és azóta új szintre léptek
                 </p>
+            </div>
 
-                <!-- Filter Tabs -->
+            <!-- Impressive Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto mb-16">
+                <!-- Stat 1 -->
+                <div class="fade-in group relative">
+                    <div class="bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border-2 border-zinc-800 rounded-3xl p-8 md:p-10 transition-all duration-500 hover:border-bazu-yellow/50 hover:shadow-2xl hover:shadow-bazu-yellow/20 hover:-translate-y-2 backdrop-blur-sm">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-bazu-yellow mb-4 group-hover:scale-110 transition-transform duration-300" id="views-counter">
+                            0
+                        </div>
+                        <div class="text-gray-400 text-sm md:text-base font-semibold uppercase tracking-wider">
+                            Videó Megtekintés
+                        </div>
+                        <div class="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-transparent via-bazu-yellow to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="fade-in group relative" style="transition-delay: 0.1s">
+                    <div class="bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border-2 border-zinc-800 rounded-3xl p-8 md:p-10 transition-all duration-500 hover:border-green-500/50 hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-2 backdrop-blur-sm">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-green-400 mb-4 group-hover:scale-110 transition-transform duration-300" id="feedback-counter">
+                            0%
+                        </div>
+                        <div class="text-gray-400 text-sm md:text-base font-semibold uppercase tracking-wider">
+                            Pozitív Visszajelzés
+                        </div>
+                        <div class="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-transparent via-green-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="fade-in group relative" style="transition-delay: 0.2s">
+                    <div class="bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border-2 border-zinc-800 rounded-3xl p-8 md:p-10 transition-all duration-500 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2 backdrop-blur-sm">
+                        <div class="text-5xl md:text-6xl lg:text-7xl font-black text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300" id="followers-counter">
+                            0
+                        </div>
+                        <div class="text-gray-400 text-sm md:text-base font-semibold uppercase tracking-wider">
+                            Új Követő Átlagosan
+                        </div>
+                        <div class="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Tabs (moved here from Impact Stories section) -->
+            <div class="fade-in">
+                <p class="text-gray-400 text-lg md:text-xl mb-6">Szűrés kategória szerint:</p>
                 <div class="flex flex-wrap justify-center gap-3 md:gap-4">
                     <button onclick="filterStories('all')" class="filter-btn active px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 bg-bazu-yellow text-black hover:scale-105" data-filter="all">
                         ✨ Mind
@@ -257,7 +260,23 @@
                     </button>
                 </div>
             </div>
+        </div>
 
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-bazu-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Impact Stories Cards Section -->
+    <section class="py-20 px-6 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-1/4 left-0 w-64 h-64 bg-bazu-yellow/3 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-blue-500/3 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
             <!-- Stories Grid -->
             <div id="stories-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
 
