@@ -110,33 +110,63 @@
     </section>
 
     <!-- Case Studies Section -->
-    <section class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
+    <section class="py-20 px-6 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-1/4 left-0 w-64 h-64 bg-bazu-yellow/3 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-blue-500/3 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
                     <span class="text-bazu-yellow">Impact</span> Stories
                 </h2>
-                <p class="text-gray-400 text-base md:text-lg lg:text-xl font-light">
+                <p class="text-gray-400 text-lg md:text-xl lg:text-2xl font-light mb-8">
                     Így változtatta meg a Bazu az ő életüket
                 </p>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                    <button onclick="filterStories('all')" class="filter-btn active px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 bg-bazu-yellow text-black hover:scale-105" data-filter="all">
+                        ✨ Mind
+                    </button>
+                    <button onclick="filterStories('business')" class="filter-btn px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 bg-zinc-800 text-gray-400 hover:bg-zinc-700 hover:text-white" data-filter="business">
+                        💼 Üzleti
+                    </button>
+                    <button onclick="filterStories('viral')" class="filter-btn px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 bg-zinc-800 text-gray-400 hover:bg-zinc-700 hover:text-white" data-filter="viral">
+                        🚀 Virális
+                    </button>
+                    <button onclick="filterStories('network')" class="filter-btn px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 bg-zinc-800 text-gray-400 hover:bg-zinc-700 hover:text-white" data-filter="network">
+                        🌐 Hálózat
+                    </button>
+                    <button onclick="filterStories('personal')" class="filter-btn px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 bg-zinc-800 text-gray-400 hover:bg-zinc-700 hover:text-white" data-filter="personal">
+                        💫 Személyes
+                    </button>
+                </div>
             </div>
 
             <!-- Stories Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            <div id="stories-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
 
                 <!-- Story 1: Rózsa Sándor Marcel -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-8 hover:border-bazu-yellow/50">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Rózsa Sándor Marcel</h3>
-                            <p class="text-gray-500 text-sm mt-1">Vállalkozó</p>
+                <div class="story-card fade-in group relative bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-bazu-yellow/50 hover:shadow-2xl hover:shadow-bazu-yellow/10 hover:-translate-y-2" data-category="business">
+                    <!-- Impact Level Badge -->
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center gap-1.5 bg-bazu-yellow/20 border border-bazu-yellow/40 px-3 py-1.5 rounded-full">
+                            <span class="text-bazu-yellow text-xs font-bold">⚡ HIGH</span>
                         </div>
-                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20 self-start sm:self-auto">
-                            Üzleti Kapcsolatépítés
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">💼</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-bazu-yellow transition-colors">Rózsa Sándor Marcel</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Vállalkozó</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Rózsa Sándor Marcel egy új céggel tárgyalt, amikor a pénzügyes megkérdezte: "Várj, nem te voltál a Bazu videóban?" A felismerés icebreaker lett, feloldotta a hangulatot, és a deal megköttetett.
                         </p>
@@ -144,20 +174,31 @@
                             Kezdetben azt hitte, "béna" TikTok videóban szerepelni, de teljesen tévedett - azóta elgondolkodott a saját személyes brandjének építésén is.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 rounded-full text-xs font-semibold border border-bazu-yellow/20">
+                            Üzleti Kapcsolatépítés
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 2: Bolyár Gábor -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-8 hover:border-bazu-yellow/50">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Bolyár Gábor</h3>
-                            <p class="text-gray-500 text-sm mt-1">Graphisoft</p>
+                <div class="story-card fade-in group relative bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2" data-category="personal">
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center gap-1.5 bg-purple-500/20 border border-purple-500/40 px-3 py-1.5 rounded-full">
+                            <span class="text-purple-400 text-xs font-bold">✓ MEDIUM</span>
                         </div>
-                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20 self-start sm:self-auto">
-                            Professzionális Megjelenés
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">🎤</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Bolyár Gábor</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Graphisoft</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Bolyár Gábor a street interview után rengeteg gratulációt kapott kollégáktól és ismerősöktől, hogy "milyen jókat mondott" a videóban.
                         </p>
@@ -165,20 +206,31 @@
                             Annyira tetszett neki, ahogy rövid formátumba átadták minden gondolatát, hogy ezután eljött podcast vendégnek is.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-purple-500/10 text-purple-400 px-3 py-1.5 rounded-full text-xs font-semibold border border-purple-500/20">
+                            Professzionális Megjelenés
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 3: Damborózia -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-8 hover:border-bazu-yellow/50">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Damborózia</h3>
-                            <p class="text-gray-500 text-sm mt-1">Esküvői Ruha Márka</p>
+                <div class="story-card fade-in group relative bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-green-500/50 hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-2" data-category="network">
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center gap-1.5 bg-green-500/20 border border-green-500/40 px-3 py-1.5 rounded-full">
+                            <span class="text-green-400 text-xs font-bold">⚡ HIGH</span>
                         </div>
-                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20 self-start sm:self-auto">
-                            Hálózat Felélesztése
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">👗</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-green-400 transition-colors">Damborózia</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Esküvői Ruha Márka</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             A Damborózia márka tulajdonosa sehol nincs jelen a közösségi médiában, mégis csomó emberrel találkozik azóta, aki a Bazu videóból ismeri.
                         </p>
@@ -186,20 +238,31 @@
                             Régi iskolatársai írtak rá az osztálytalálkozón: "Úristen, nem is tudtuk hogy te ezt csinálod, milyen jó!" - annak ellenére, hogy évek óta nem hallottak róla.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-green-500/10 text-green-400 px-3 py-1.5 rounded-full text-xs font-semibold border border-green-500/20">
+                            Hálózat Felélesztése
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 4: Homán Zsolt -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-8 hover:border-bazu-yellow/50">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Homán Zsolt</h3>
-                            <p class="text-gray-500 text-sm mt-1">Homán Transport</p>
+                <div class="story-card fade-in group relative bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10 hover:-translate-y-2" data-category="viral">
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center gap-1.5 bg-red-500/20 border border-red-500/40 px-3 py-1.5 rounded-full">
+                            <span class="text-red-400 text-xs font-bold">🔥 VIRAL</span>
                         </div>
-                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20 self-start sm:self-auto">
-                            Azonnali Virális Hatás
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">🚚</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-red-400 transition-colors">Homán Zsolt</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Homán Transport</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Homán Zsolt már aznap, amikor megjelent a videó, 15 barátjától kapta: "Milyen jó, menő hogy itt vagy!"
                         </p>
@@ -207,25 +270,37 @@
                             Bár nem beszélt sokat, sokan küldték egymásnak és jelezték, hogy jól beszélt, tetszett.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded-full text-xs font-semibold border border-red-500/20">
+                            Azonnali Virális Hatás
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 5: Tóth Alex (Featured) -->
-                <div class="fade-in card-hover bg-gradient-to-br from-zinc-900 to-zinc-800 border-2 border-bazu-yellow/50 rounded-2xl p-5 md:p-8 relative overflow-hidden">
-                    <!-- Featured badge -->
-                    <div class="absolute top-3 right-3 md:top-4 md:right-4">
-                        <span class="text-xl md:text-2xl">⭐</span>
+                <div class="story-card fade-in group relative bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border-2 border-bazu-yellow/70 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-bazu-yellow hover:shadow-2xl hover:shadow-bazu-yellow/20 hover:-translate-y-2" data-category="business viral">
+                    <!-- Featured Star -->
+                    <div class="absolute top-3 right-3 md:top-4 md:right-4 text-3xl md:text-4xl animate-pulse">
+                        ⭐
                     </div>
 
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Tóth Alex</h3>
-                            <p class="text-gray-500 text-sm mt-1">Órás</p>
+                    <!-- Impact Level Badge -->
+                    <div class="absolute top-4 left-4">
+                        <div class="flex items-center gap-1.5 bg-bazu-yellow/30 border border-bazu-yellow px-3 py-1.5 rounded-full">
+                            <span class="text-bazu-yellow text-xs font-bold">🚀 ULTRA</span>
                         </div>
-                        <span class="bg-bazu-yellow text-black px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider self-start sm:self-auto">
-                            Üzleti Transzformáció
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-12">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">⌚</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-bazu-yellow">Tóth Alex</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Órás • 1.5M+ Views</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Tóth Alex órás szerepelt a Bazu egyik legnézettebb TikTok videójában (1.5M+ megtekintés). Már aznap 10+ ember kérte el a telefonszámát. Saját profilján 600-ról 6-7 ezer megtekintésre ugrott pár nap alatt - annak ellenére, hogy sem neve, sem cége nem volt elmondva a videóban.
                         </p>
@@ -233,20 +308,31 @@
                             6-7 ezer ember aktívan megkereste őt. Azóta kampányol a Bazu videóval, új videóit a Bazu hookkal indítja, és "kurva sok ügyfél, megkeresés" érkezett.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-bazu-yellow text-black px-3 py-1.5 rounded-full text-xs font-bold">
+                            Üzleti Transzformáció
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 6: Lipp Adrienn -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-8 hover:border-bazu-yellow/50">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Lipp Adrienn</h3>
-                            <p class="text-gray-500 text-sm mt-1">Ingatlan</p>
+                <div class="story-card fade-in group relative bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-2" data-category="network">
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center gap-1.5 bg-cyan-500/20 border border-cyan-500/40 px-3 py-1.5 rounded-full">
+                            <span class="text-cyan-400 text-xs font-bold">🌍 GLOBAL</span>
                         </div>
-                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20 self-start sm:self-auto">
-                            Nemzetközi Elérés
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">🏠</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">Lipp Adrienn</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">Ingatlan</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Lipp Adrienn még Bécsben is felismerték a videó után. Az oldala lefagyott a megnövekedett forgalomtól.
                         </p>
@@ -254,25 +340,37 @@
                             Még aznap felhívták, hogy gratuláljanak és segítséget kérjenek ingatlan ügyben.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1.5 rounded-full text-xs font-semibold border border-cyan-500/20">
+                            Nemzetközi Elérés
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 7: Zoltán (Featured) -->
-                <div class="fade-in card-hover bg-gradient-to-br from-zinc-900 to-zinc-800 border-2 border-blue-500/50 rounded-2xl p-5 md:p-8 relative overflow-hidden">
-                    <!-- Featured badge -->
-                    <div class="absolute top-3 right-3 md:top-4 md:right-4">
-                        <span class="text-xl md:text-2xl">💙</span>
+                <div class="story-card fade-in group relative bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border-2 border-blue-500/70 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2" data-category="personal">
+                    <!-- Featured Heart -->
+                    <div class="absolute top-3 right-3 md:top-4 md:right-4 text-3xl md:text-4xl animate-pulse">
+                        💙
                     </div>
 
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Zoltán</h3>
-                            <p class="text-gray-500 text-sm mt-1">50 Éves Vállalkozó</p>
+                    <!-- Impact Level Badge -->
+                    <div class="absolute top-4 left-4">
+                        <div class="flex items-center gap-1.5 bg-blue-500/30 border border-blue-400 px-3 py-1.5 rounded-full">
+                            <span class="text-blue-300 text-xs font-bold">💫 SPECIAL</span>
                         </div>
-                        <span class="bg-blue-500/20 text-blue-400 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider border border-blue-500/30 self-start sm:self-auto">
-                            Életmű Validáció
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-12">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">👨‍💼</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-blue-300">Zoltán</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">50 Éves Vállalkozó • 700 Comments</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Egy 50 éves vállalkozó 50 évig próbált jó lenni, de sosem volt visszaigazolása. A Bazu videó 700 kommentet kapott, 98% pozitív volt.
                         </p>
@@ -280,26 +378,42 @@
                             Felhívta Kazut: "Ez olyan visszaigazolás volt, amit még sosem kaptam... boldogság, hogy úristen, akkor jól csináltam az életemet, mert ennyi ember így gondolja." Szívmelengető volt neki, és a legjobb döntés volt, hogy megállt nekik.
                         </p>
                     </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-blue-500/20 text-blue-300 px-3 py-1.5 rounded-full text-xs font-bold border border-blue-500/30">
+                            Életmű Validáció
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Story 8: Kapitány István -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-8 hover:border-bazu-yellow/50">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white">Kapitány István</h3>
-                            <p class="text-gray-500 text-sm mt-1">BGE Előadó</p>
+                <div class="story-card fade-in group relative bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 md:p-8 transition-all duration-500 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2" data-category="personal">
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center gap-1.5 bg-indigo-500/20 border border-indigo-500/40 px-3 py-1.5 rounded-full">
+                            <span class="text-indigo-400 text-xs font-bold">✓ MEDIUM</span>
                         </div>
-                        <span class="bg-bazu-yellow/10 text-bazu-yellow px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider border border-bazu-yellow/20 self-start sm:self-auto">
-                            Előadói Felismerés
-                        </span>
                     </div>
-                    <div class="text-gray-300 leading-relaxed space-y-3">
+
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 mt-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-3xl">🎓</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">Kapitány István</h3>
+                            </div>
+                            <p class="text-gray-500 text-sm">BGE Előadó</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed space-y-3 mb-4">
                         <p>
                             Kapitány István a BGE-n tartott előadást, amikor észrevette, hogy a hallgatók ismerősen néznek rá. Kiderült, hogy a "Bazu interjúzás"-ként ismerik fel.
                         </p>
                         <p>
                             Sokan még azelőtt látták a videóban, mielőtt az előadására mentek volna.
                         </p>
+                    </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1.5 rounded-full text-xs font-semibold border border-indigo-500/20">
+                            Előadói Felismerés
+                        </span>
                     </div>
                 </div>
 
@@ -579,6 +693,50 @@
                 }
             }
         });
+
+        // Story filtering functionality
+        function filterStories(category) {
+            const stories = document.querySelectorAll('.story-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            // Update button styles
+            filterButtons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.remove('bg-zinc-800', 'text-gray-400');
+                    btn.classList.add('bg-bazu-yellow', 'text-black', 'active');
+                } else {
+                    btn.classList.remove('bg-bazu-yellow', 'text-black', 'active');
+                    btn.classList.add('bg-zinc-800', 'text-gray-400');
+                }
+            });
+
+            // Filter stories with animation
+            stories.forEach((story, index) => {
+                const storyCategories = story.getAttribute('data-category');
+
+                if (category === 'all' || storyCategories.includes(category)) {
+                    // Show story with stagger animation
+                    setTimeout(() => {
+                        story.style.display = 'block';
+                        story.style.opacity = '0';
+                        story.style.transform = 'translateY(20px)';
+
+                        requestAnimationFrame(() => {
+                            story.style.transition = 'all 0.5s ease';
+                            story.style.opacity = '1';
+                            story.style.transform = 'translateY(0)';
+                        });
+                    }, index * 50);
+                } else {
+                    // Hide story
+                    story.style.opacity = '0';
+                    story.style.transform = 'translateY(-20px)';
+                    setTimeout(() => {
+                        story.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
     </script>
 </body>
 </html>
