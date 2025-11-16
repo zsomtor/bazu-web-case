@@ -308,64 +308,160 @@
     </section>
 
     <!-- Featured Projects Section -->
-    <section class="py-20 px-6 bg-zinc-950/50">
-        <div class="max-w-7xl mx-auto">
+    <section class="py-20 px-6 bg-zinc-950/50 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-bazu-yellow/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-bazu-yellow/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
             <!-- Section Header -->
-            <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+            <div class="text-center mb-16 md:mb-20 fade-in">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
                     Kiemelt <span class="text-bazu-yellow">Projektek</span>
                 </h2>
-                <p class="text-gray-400 text-base md:text-lg lg:text-xl font-light">
-                    Fedezd fel a Bazu legjobb tartalmait
+                <p class="text-gray-400 text-lg md:text-xl lg:text-2xl font-light">
+                    A kulisszák mögött - kreativitás a gyakorlatban
                 </p>
             </div>
 
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Project Showcase -->
+            <div class="space-y-16 md:space-y-24">
 
                 <!-- Project 1: Lipp Adrienn Podcast -->
-                <div class="fade-in card-hover bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Lipp Adrienn - Podcast</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Nem a szokásos studióban voltunk, hanem elmentünk egy kis településre és KINT forgattuk le, kocsikkal traktorkal és élő lovakkal a háttérben.
+                <article class="fade-in group">
+                    <!-- Project Header -->
+                    <div class="mb-8 md:mb-12">
+                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-4">
+                            <div>
+                                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3 group-hover:text-bazu-yellow transition-colors duration-300">
+                                    Lipp Adrienn - Podcast
+                                </h3>
+                                <p class="text-xl md:text-2xl text-gray-400 font-light">
+                                    Outdoor Special 🎙️
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="bg-bazu-yellow text-black px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider">
+                                    Podcast
+                                </span>
+                                <span class="bg-green-500/20 text-green-400 px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider border border-green-500/30">
+                                    Outdoor
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl">
+                            Nem a szokásos studióban voltunk, hanem elmentünk egy kis településre és <span class="text-bazu-yellow font-semibold">KINT forgattuk le</span>, kocsikkal, traktorokkal és élő lovakkal a háttérben.
                         </p>
+                    </div>
 
-                        <!-- Image Gallery -->
-                        <div class="grid grid-cols-3 gap-2 mb-4">
-                            <div class="aspect-video relative overflow-hidden rounded-lg border border-zinc-700">
+                    <!-- Featured Hero Image -->
+                    <div class="mb-6 relative group/hero cursor-pointer" onclick="openLightbox(0)">
+                        <div class="aspect-video rounded-3xl overflow-hidden border-2 border-zinc-800 group-hover/hero:border-bazu-yellow/50 transition-all duration-500 relative">
+                            <img
+                                src="https://i.imgur.com/wcNcNPT.jpeg"
+                                alt="Behind the scenes - Outdoor recording"
+                                class="w-full h-full object-cover group-hover/hero:scale-105 transition-transform duration-700"
+                                loading="lazy"
+                            />
+                            <!-- Overlay on hover -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/hero:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                                <div class="text-white">
+                                    <p class="text-2xl font-bold mb-2">Behind the Scenes</p>
+                                    <p class="text-gray-300">Kattints a nagyításhoz 🔍</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bento Grid - Gallery Thumbnails -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                        <!-- Thumbnail 1 - Spans 2 columns on mobile -->
+                        <div class="col-span-2 md:col-span-1 group/thumb cursor-pointer relative" onclick="openLightbox(0)">
+                            <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-700 hover:border-bazu-yellow/50 transition-all duration-300">
                                 <img
                                     src="https://i.imgur.com/wcNcNPT.jpeg"
-                                    alt="Behind the scenes"
-                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                    alt="Setup - tractors and cars"
+                                    class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-500"
                                 />
                             </div>
-                            <div class="aspect-video relative overflow-hidden rounded-lg border border-zinc-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end p-4">
+                                <p class="text-white text-sm font-semibold">📸 Setup</p>
+                            </div>
+                        </div>
+
+                        <!-- Thumbnail 2 -->
+                        <div class="group/thumb cursor-pointer relative" onclick="openLightbox(1)">
+                            <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-700 hover:border-bazu-yellow/50 transition-all duration-300">
                                 <img
                                     src="https://i.imgur.com/izAoxuz.jpeg"
                                     alt="Recording moment 1"
-                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                    class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-500"
                                 />
                             </div>
-                            <div class="aspect-video relative overflow-hidden rounded-lg border border-zinc-700">
-                                <img
-                                    src="https://i.imgur.com/7jtsuey.jpeg"
-                                    alt="Recording moment 2"
-                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end p-4">
+                                <p class="text-white text-sm font-semibold">🎬 Action</p>
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-between">
-                            <span class="text-bazu-yellow text-sm font-semibold">Outdoor Special</span>
-                            <span class="text-gray-500 text-xs">Podcast</span>
+                        <!-- Thumbnail 3 -->
+                        <div class="group/thumb cursor-pointer relative" onclick="openLightbox(2)">
+                            <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-700 hover:border-bazu-yellow/50 transition-all duration-300">
+                                <img
+                                    src="https://i.imgur.com/7jtsuey.jpeg"
+                                    alt="Recording moment 2"
+                                    class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-500"
+                                />
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end p-4">
+                                <p class="text-white text-sm font-semibold">✨ Magic</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Project Stats/Info -->
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-center hover:border-bazu-yellow/30 transition-colors">
+                            <div class="text-2xl font-black text-bazu-yellow mb-1">🏞️</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Location</div>
+                            <div class="text-sm text-white font-semibold mt-1">Outdoor</div>
+                        </div>
+                        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-center hover:border-bazu-yellow/30 transition-colors">
+                            <div class="text-2xl font-black text-bazu-yellow mb-1">🎥</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Format</div>
+                            <div class="text-sm text-white font-semibold mt-1">Podcast</div>
+                        </div>
+                        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-center hover:border-bazu-yellow/30 transition-colors">
+                            <div class="text-2xl font-black text-bazu-yellow mb-1">🐴</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Special</div>
+                            <div class="text-sm text-white font-semibold mt-1">Horses</div>
+                        </div>
+                        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-center hover:border-bazu-yellow/30 transition-colors">
+                            <div class="text-2xl font-black text-bazu-yellow mb-1">🚜</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Vibe</div>
+                            <div class="text-sm text-white font-semibold mt-1">Rural</div>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-bazu-yellow text-4xl font-bold z-10 transition-colors" onclick="closeLightbox()">
+            ×
+        </button>
+        <img id="lightbox-image" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-2xl border-2 border-bazu-yellow/30" onclick="event.stopPropagation()">
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+            <button onclick="changeLightboxImage(-1); event.stopPropagation();" class="bg-zinc-900 hover:bg-bazu-yellow hover:text-black text-white px-6 py-3 rounded-full font-bold transition-all">
+                ← Előző
+            </button>
+            <button onclick="changeLightboxImage(1); event.stopPropagation();" class="bg-zinc-900 hover:bg-bazu-yellow hover:text-black text-white px-6 py-3 rounded-full font-bold transition-all">
+                Következő →
+            </button>
+        </div>
+    </div>
 
     <!-- CTA Section -->
     <section class="py-20 md:py-32 px-6 relative overflow-hidden">
@@ -435,6 +531,53 @@
                 animateCounter(document.getElementById('feedback-counter'), 98, 2000, '%');
                 animateCounter(document.getElementById('followers-counter'), 6500, 2000, '');
             }, 500);
+        });
+
+        // Lightbox functionality
+        const lightboxImages = [
+            'https://i.imgur.com/wcNcNPT.jpeg',
+            'https://i.imgur.com/izAoxuz.jpeg',
+            'https://i.imgur.com/7jtsuey.jpeg'
+        ];
+        let currentLightboxIndex = 0;
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = lightboxImages[index];
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        function changeLightboxImage(direction) {
+            currentLightboxIndex += direction;
+            if (currentLightboxIndex < 0) {
+                currentLightboxIndex = lightboxImages.length - 1;
+            } else if (currentLightboxIndex >= lightboxImages.length) {
+                currentLightboxIndex = 0;
+            }
+            document.getElementById('lightbox-image').src = lightboxImages[currentLightboxIndex];
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    changeLightboxImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeLightboxImage(1);
+                }
+            }
         });
     </script>
 </body>
